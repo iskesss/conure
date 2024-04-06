@@ -7,7 +7,7 @@ from langchain_pinecone import Pinecone
 print("hello world")
 
 
-def run_llm(query: str) -> any:
+def run_llm(myQuery: str) -> any:
 
     # from_existing_index ALSO takes index_name as an argument, but I'm pretty sure it'll automatically load that from my environmental variables
     docsearch = Pinecone.from_existing_index(
@@ -28,5 +28,5 @@ def run_llm(query: str) -> any:
     return qa({"query": myQuery})  # plug myQuery into our question/answer chain
 
 
-myQuery = "What is a Langchain chain?"
-print(run_llm(myQuery)["result"])
+# myQuery = "What is a Langchain chain?"
+# print(run_llm(myQuery)["result"])
